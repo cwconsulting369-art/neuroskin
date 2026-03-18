@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import ImageUploader from "@/components/ImageUploader";
 import AnalysisResult from "@/components/AnalysisResult";
 import Disclaimer from "@/components/Disclaimer";
+import ConsentGate from "@/components/ConsentGate";
 
 interface AnalysisResponse {
   result: "gutartig" | "verdächtig" | "hohes_risiko";
@@ -13,7 +14,7 @@ interface AnalysisResponse {
   model: string;
 }
 
-export default function Home() {
+function AppContent() {
   const [isLoading, setIsLoading] = useState(false);
   const [analysisResult, setAnalysisResult] =
     useState<AnalysisResponse | null>(null);
@@ -74,9 +75,9 @@ export default function Home() {
           {/* Feature Pills */}
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             {[
-              { icon: "\u26A1", text: "Sofortige Analyse" },
-              { icon: "\uD83D\uDD12", text: "Datenschutzkonform" },
-              { icon: "\uD83E\uDDE0", text: "KI-Technologie" },
+              { icon: "⚡", text: "Sofortige Analyse" },
+              { icon: "🔒", text: "Datenschutzkonform" },
+              { icon: "🧠", text: "KI-Technologie" },
             ].map((feature) => (
               <span
                 key={feature.text}
@@ -107,5 +108,13 @@ export default function Home() {
 
       <Disclaimer />
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <ConsentGate>
+      <AppContent />
+    </ConsentGate>
   );
 }
