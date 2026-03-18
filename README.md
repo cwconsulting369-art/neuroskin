@@ -1,4 +1,4 @@
-# MedTech Skin AI
+# NeuroSkin Skin AI
 
 KI-gestützte Hautkrebsfrüherkennung - MVP Prototyp
 
@@ -7,7 +7,7 @@ KI-gestützte Hautkrebsfrüherkennung - MVP Prototyp
 ### Frontend (Next.js)
 
 ```bash
-cd medtech-skin-ai
+cd neuroskin
 npm install
 npm run dev
 ```
@@ -33,8 +33,8 @@ Without HF_TOKEN, the app runs in demo mode with simulated results.
 
 ```bash
 cd backend
-docker build -t medtech-skin-ai-backend .
-docker run -p 8000:8000 -e HF_TOKEN=your_token medtech-skin-ai-backend
+docker build -t neuroskin-backend .
+docker run -p 8000:8000 -e HF_TOKEN=your_token neuroskin-backend
 ```
 
 ## Architecture

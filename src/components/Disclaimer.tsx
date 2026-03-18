@@ -16,7 +16,7 @@ export default function Disclaimer() {
             konsultieren.
           </p>
           <p className="mt-2 text-xs text-gray-600">
-            &copy; 2026 MedTech Skin AI - Prototyp
+            &copy; 2026 NeuroSkin - Prototyp
           </p>
         </div>
       </div>

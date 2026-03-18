@@ -22,7 +22,7 @@ export default function Header() {
           </div>
           <div>
             <h1 className="text-lg font-bold text-white">
-              MedTech <span className="text-medical-blue">Skin AI</span>
+              Neuro<span className="text-medical-blue">Skin</span>
             </h1>
             <p className="text-xs text-gray-400">Hautkrebsfrüherkennung</p>
           </div>
